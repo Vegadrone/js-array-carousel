@@ -1,4 +1,4 @@
-//!Consegna:
+//!################################################ CONSEGNA ################################################:
 // * Dato un array contenente una lista di sei immagini(url), creare un carosello come nello screenshot allegato.
 // *     MILESTONE 1
 // * Per prima cosa, creiamo il markup statico: costruiamo il container e inseriamo un'immagine grande al centro:
@@ -33,7 +33,7 @@
 // TODO Scriviamo sempre prima per punti il nostro algoritmo in italiano per capire cosa vogliamo fare
 // TODO Al momento giusto(ihihhi starà a voi capire quale) rispondete a questa domanda: "Quanti cicli servono?"
 
-
+//?################################################ ESERCIZIO ################################################
  
 const images = [
     'https://cdn.photographycourse.net/wp-content/uploads/2022/04/Portrait-vs-Landscape-Featured-Image-3.jpg',
@@ -48,6 +48,8 @@ const imgWrapepr = document.getElementById('img-wrapper');
 
 const imgElement = document.createElement ('img');
 imgWrapepr.append (imgElement);
+imgElement.classList.add('ms_img', 'active')
+imgElement.setAttribute('src', 'https://cdn.photographycourse.net/wp-content/uploads/2022/04/Portrait-vs-Landscape-Featured-Image-3.jpg' )
 
 for (let i=0; i < images.length; i++){
     
