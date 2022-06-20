@@ -47,10 +47,12 @@ const images = [
 const imgWrapepr = document.getElementById('img-wrapper');
 
 const imgElement = document.createElement ('img');
-imgWrapepr.append (imgElement);
-imgElement.classList.add('ms_img', 'active')
-imgElement.setAttribute('src', 'https://cdn.photographycourse.net/wp-content/uploads/2022/04/Portrait-vs-Landscape-Featured-Image-3.jpg' )
+const insertImg = imgWrapepr.append (imgElement);
+let addImgClass = imgElement.classList.add('ms_img','active');
+imgElement.setAttribute ('src', '');
 
-for (let i=0; i < images.length; i++){
-    
+for (let i = 0; i < images.length; i++){
+     `${imgElement} + ${insertImg} + ${addImgClass} + imgElement.setAttribute('src', 'images.length [i]')`;
 }
+   
+   
