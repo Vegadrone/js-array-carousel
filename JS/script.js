@@ -45,14 +45,18 @@ const images = [
 ];
 
 const imgWrapepr = document.getElementById('img-wrapper');
+const nextButton = document.getElementById('next-btn');
+const previousButton = document.getElementById('previous-btn');
 
-const imgElement = document.createElement ('img');
-const insertImg = imgWrapepr.append (imgElement);
-let addImgClass = imgElement.classList.add('ms_img','active');
-imgElement.setAttribute ('src', '');
 
 for (let i = 0; i < images.length; i++){
-     `${imgElement} + ${insertImg} + ${addImgClass} + imgElement.setAttribute('src', 'images.length [i]')`;
+    const imgElement = document.createElement('img');
+    imgWrapepr.append(imgElement);
+    imgElement.classList.add('ms_img');
+    imgElement.setAttribute('src', images[i]);
 }
+
+
+
    
    
