@@ -1,3 +1,14 @@
-body {
-    background-color: aquamarine;
+#image-wrapper {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.ms_img {
+    width: 100%;
+    margin-bottom: 40px;
+    border-radius: 1%;
+}
+
+.active{
+    display: block;
 }
