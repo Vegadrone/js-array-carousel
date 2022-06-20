@@ -83,8 +83,16 @@ let imgElementActive = 0
 
 imgElementList[imgElementActive].classList.add('active');
 
+nextButton.addEventListener('click', function () {
 
+    imgElementList[imgElementActive].classList.remove('active');
 
+    imgElementActive++;
 
-   
+    if (imgElementActive === imgElementList.length) {
+        imgElementActive = 0;
+    }
+
+    imgElementList[imgElementActive].classList.add('active');
+})
    
