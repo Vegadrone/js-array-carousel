@@ -34,7 +34,9 @@
 // TODO Al momento giusto(ihihhi starà a voi capire quale) rispondete a questa domanda: "Quanti cicli servono?"
 
 //?################################################ ESERCIZIO ################################################
- 
+
+
+//!ARRAY CON LINK DI IMMAGINI
 const images = [
     'https://cdn.photographycourse.net/wp-content/uploads/2022/04/Portrait-vs-Landscape-Featured-Image-3.jpg',
     'https://i.natgeofe.com/n/2a832501-483e-422f-985c-0e93757b7d84/6.jpg',
@@ -44,17 +46,43 @@ const images = [
     'https://mymodernmet.com/wp/wp-content/uploads/2020/02/Landscape-Photographer-of-the-Year-Sander-Grefte.jpg'
 ];
 
-const imgWrapepr = document.getElementById('img-wrapper');
+//!CREO COSTANNTI PER:
+    //! - IL WRAPPER DELLE IMG
+    //! - CREAZIONE DELL'ELEMENTO IMG
+    //! - BOTTONE NEXT 
+    //! - BOTTONE PREVIOUS
+//!TUTTO CIò VA RECUPERATO VIA document.getElementById ('nome id') DAL DOCUMENT HTML
+
+const imgWrapper = document.getElementById('img-wrapper');
+const imgElement = document.createElement('img')
 const nextButton = document.getElementById('next-btn');
 const previousButton = document.getElementById('previous-btn');
 
+//!PER EVITARE DI METTERE TUTTE LE IMG A MANO CREO UN CICLO FOR E CI METTO:
+    //! - LA COSTANTE PER LA CREAZIONE DEI TAG IMG.
+    //! - "container-parent".append PER METTERE ALL'INTERNO I TAG CREATI SOPRA.
+    //! - UN "elemento".classList.add PER AGGIUNGERE AD OGNI NUOVO TAG IMG CREATO UNA O + CLASSI A MIA SCELTA.
+    //! - UN "elemento".setAttribute ('src', nomeArray [i]) PER METTERE DENTRO OGNI ATTRIBUTO SRC CREATO SU OGNI TAG
+    //!   IMG CREATO SOPRA IL LINK CHE CORRISPONDE ALL'INDICE DI OGNI ELEMENTO DELL'ARRAY.
 
 for (let i = 0; i < images.length; i++){
     const imgElement = document.createElement('img');
-    imgWrapepr.append(imgElement);
+    imgWrapper.append(imgElement);
     imgElement.classList.add('ms_img');
     imgElement.setAttribute('src', images[i]);
 }
+
+//! CREO UNA LISTA DI IMMAGINI PRENDENDO L'IMG WRAPPER E TARGETTANDONE I FIGLI IN QUESTO MODO (imgWrapper.children)
+    //! QUESTO SI COMPORTERà COME SE FOSSE UN'ARRAY.
+//! CREO UNA LET DANDOGLI UN NOME E SCEGLIENDO IL NUMERO (CHE POI SARà L'INDICE DELL'"ARRAY" LISTA DI IMMAGINI) DA CUI 
+    //! VOGLIO PARTIRE.
+
+
+const imgElementList = imgWrapper.children;
+let imgElementActive = 0
+
+imgElementList[imgElementActive].classList.add('active');
+
 
 
 

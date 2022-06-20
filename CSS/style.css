@@ -3,6 +3,7 @@
     margin-bottom: 40px;
     border-radius: 1%;
     display: none;
+    object-fit: cover;
 }
 
 .active{
